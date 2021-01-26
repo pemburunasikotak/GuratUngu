@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/warnabgUnggu"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/logounggu"
+        android:contentDescription="@string/todo" />
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="420dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/ic_bglogin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="Nama Event"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/et_namatambahevent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bglistagenda"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="Waktu"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/et_tgltambahevent"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:hint="settgl"
+                android:background="@drawable/ic_bglistagenda"
+                android:textColorHint="@color/warnabghitam"
+                android:inputType="date" />
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="&amp;"
+                android:textColor="@color/warnabghitam"/>
+
+            <EditText
+                android:id="@+id/et_wkttambahevent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="setwaktu"
+                android:textColorHint="@color/warnabghitam"
+                android:background="@drawable/ic_bglistagenda"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="Tempat"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/et_tempattambahevent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bglistagenda"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="Latitude"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/et_lattambahevent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bglistagenda"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="Longitude"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/et_longtambahevent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bglistagenda"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="Durasi"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/et_durasitambahevent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_bglistagenda"
+                android:inputType="datetime" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_tambaevent"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_bglistagenda"
+            android:text="@string/tambah" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">GuratUngu</string>
+    <string name="login_sebagai">Login Sebagai ?</string>
+    <string name="karyawan">Karyawan</string>
+    <string name="admin">Admin</string>
+    <string name="todo">TODO</string>
+    <string name="by_karyawan">By Karyawan</string>
+    <string name="jam">jam</string>
+    <string name="hari_tgl">hari tgl</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="karyawan_join">Karyawan Join</string>
+    <string name="hapus">Hapus</string>
+    <string name="edit">Edit</string>
+    <string name="value">........</string>
+    <string name="ok">OK</string>
+    <string name="titik2">........</string>
+    <string name="event">Event</string>
+    <string name="tambah">tambah</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+</resources>

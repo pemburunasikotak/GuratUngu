@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/warnabgUnggu"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:background="@drawable/ic_bglogin"
+        android:layout_marginTop="144dp">
+
+        <ImageView
+
+            android:layout_width="245dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logounggu"
+            android:contentDescription="@string/todo" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="Register Account" />
+
+        
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="287dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_bg_ping"
+            android:layout_gravity="center">
+            <EditText
+                android:id="@+id/et_namaregistrasi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Nama"
+                android:textStyle="italic"
+                android:background="@null"
+                android:inputType="text"
+                android:textColor="@color/warnabghitam"
+                android:layout_marginStart="30dp"
+                android:autofillHints="">
+
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="287dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_bg_ping">
+        <EditText
+            android:id="@+id/et_notelpregistrasi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="No Telpon"
+            android:background="@null"
+            android:textStyle="italic"
+            android:inputType="number"
+            android:textColor="@color/warnabghitam"
+            android:layout_marginStart="30dp"
+            android:autofillHints="">
+
+        </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="287dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_bg_ping"
+            android:layout_gravity="center">
+            <EditText
+                android:id="@+id/et_emailregistrasi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Email"
+                android:background="@null"
+                android:textStyle="italic"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/warnabghitam"
+                android:layout_marginStart="30dp">
+
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="287dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_bg_ping"
+            android:layout_gravity="center">
+            <EditText
+                android:id="@+id/et_paswdregistrasi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:textStyle="italic"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:textColor="@color/warnabghitam"
+                android:layout_marginStart="30dp">
+
+            </EditText>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_registrasi"
+            android:layout_width="134dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_bgbiru"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            android:textColor="#fff"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

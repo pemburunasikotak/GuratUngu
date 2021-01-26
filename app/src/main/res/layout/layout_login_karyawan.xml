@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/warnabgUnggu"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:background="@drawable/bglogin"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="245dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logounggu"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_marginTop="22dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:text="@string/by_karyawan" />
+
+        
+        <LinearLayout
+            android:layout_width="287dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_form">
+            <EditText
+                android:id="@+id/it_emaillogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/email"
+                android:background="@null"
+                android:textStyle="italic"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/warnabghitam"
+                android:layout_marginStart="30dp">
+
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="287dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_form"
+            android:layout_gravity="center">
+            <EditText
+                android:id="@+id/it_passwdlogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:background="@null"
+                android:textStyle="italic"
+                android:inputType="textPassword"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/warnabghitam">
+
+            </EditText>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_singinloginkaryawan"
+            android:layout_width="134dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_bgbiru"
+            android:text="Sign In"
+            android:textColor="#fff"
+            android:layout_marginStart="94dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:text="Belum Terdaftar ?" />
+        <Button
+            android:id="@+id/btn_creatakunloginkaryawan"
+            android:layout_width="191dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_bgorage"
+            android:text="Create new akun"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:layout_marginStart="65dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

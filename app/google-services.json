@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "781848028211",
+    "firebase_url": "https://guratungu-bf99a-default-rtdb.firebaseio.com",
+    "project_id": "guratungu-bf99a",
+    "storage_bucket": "guratungu-bf99a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781848028211:android:a7e478b7e61946abfa6f46",
+        "android_client_info": {
+          "package_name": "com.example.guratungu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781848028211-ltj4cqkr5atvl1eiqb9uehk1rep6lvuj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.guratungu",
+            "certificate_hash": "c5ee83b49a62b138ef149a66a802825f32ad7ab6"
+          }
+        },
+        {
+          "client_id": "781848028211-rsogtmfokum3sc6ml0q9b0gmni5kke64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPsr_BrtnYDihmzz-lfVpAJQPpVQLTypA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781848028211-rsogtmfokum3sc6ml0q9b0gmni5kke64.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
