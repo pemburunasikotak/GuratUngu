@@ -5,7 +5,7 @@
     android:background="@color/warnabgUnggu"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".admin.IndexAdmin">
 
     <ImageView
         android:layout_width="340dp"
@@ -48,6 +48,7 @@
                 android:textStyle="italic"
                 android:textSize="10dp"/>
             <Button
+                android:id="@+id/btn_infoeventadmin"
                 android:layout_width="70dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="5dp"
@@ -71,6 +72,7 @@
                 android:textStyle="italic"
                 android:textSize="10dp"/>
             <Button
+                android:id="@+id/btn_announcamentadmin"
                 android:layout_width="70dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="5dp"
@@ -79,8 +81,20 @@
         </LinearLayout>
         
     </LinearLayout>
-    
     <Button
+        android:id="@+id/btn_creatakunindexadmin"
+        android:layout_width="191dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ic_bgorage"
+        android:text="Create new akun"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/btn_keluarAdmin"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:text="Keluar"
@@ -88,9 +102,10 @@
         android:textAllCaps="false"
         android:textSize="12dp"
         android:layout_marginStart="265dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/ic_bgkeluarindex"/>
     <Button
+        android:id="@+id/btn_logOutAdmin"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:text="Log Out"

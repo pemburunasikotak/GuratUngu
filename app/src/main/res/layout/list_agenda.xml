@@ -5,74 +5,74 @@
     android:background="@color/warnabgUnggu"
     android:orientation="vertical"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity">
+    tools:context=".karyawan.listagendakaryawan.ListAgenda">
     <LinearLayout
-        android:layout_width="340dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="35dp"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
         android:orientation="vertical"
         android:background="@drawable/ic_bglistagenda"
         android:layout_marginTop="20dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:text="@string/event">
             </TextView>
             <TextView
                 android:id="@+id/tvevent"
                 android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:text="@string/titik2">
             </TextView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:text="@string/lokasi">
             </TextView>
             <TextView
                 android:id="@+id/tvlokasi"
                 android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:text="@string/titik2">
             </TextView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:text="@string/jam">
             </TextView>
             <TextView
                 android:id="@+id/tvjam"
                 android:layout_width="200dp"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:text="@string/titik2">
             </TextView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="match_parent"
                 android:text="@string/hari_tgl">
             </TextView>
             <TextView
@@ -84,20 +84,22 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/btn_join"
                 android:layout_width="80dp"
-                android:layout_height="20dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="120dp"
-                android:text="@string/lokasi"
+                android:text="Join"
                 android:background="@drawable/ic_bgbtn">
             </Button>
             <Button
+                android:id="@+id/btn_lokasi"
                 android:layout_width="80dp"
-                android:layout_height="20dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:text="@string/lokasi"
                 android:background="@drawable/ic_bgbtn">

@@ -12,15 +12,15 @@ import kotlinx.android.synthetic.main.layout_awal.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_announcment)
-//        btn_awalkaryawan.setOnClickListener {
-//            val intent = Intent(this, LoginKaryawan::class.java)
-//            startActivity(intent)
-//        }
-//        btn_awaladmin.setOnClickListener {
-//            val intent = Intent(this, LoginAdmin::class.java)
-//            startActivity(intent)
-//        }
+        setContentView(R.layout.layout_awal)
+        btn_awalkaryawan.setOnClickListener {
+            val intent = Intent(this, LoginKaryawan::class.java)
+            startActivity(intent)
+        }
+        btn_awaladmin.setOnClickListener {
+            val intent = Intent(this, LoginAdmin::class.java)
+            startActivity(intent)
+        }
         fullScreen()
     }
 

@@ -5,11 +5,11 @@
     android:background="@color/warnabgUnggu"
     android:orientation="vertical"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity">
+    tools:context=".admin.listagenda.ListAgenda">
 <LinearLayout
     android:layout_width="340dp"
     android:layout_height="130dp"
-    android:layout_marginStart="35dp"
+    android:layout_gravity="center"
     android:orientation="vertical"
     android:background="@drawable/ic_bglistagenda"
     android:layout_marginTop="20dp">
@@ -25,7 +25,7 @@
             android:text="Event">
         </TextView>
         <TextView
-            android:id="@+id/tvevent"
+            android:id="@+id/tveventadmin"
             android:layout_width="200dp"
             android:layout_height="20dp"
             android:text="........">

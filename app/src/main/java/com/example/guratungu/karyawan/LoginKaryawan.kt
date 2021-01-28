@@ -1,19 +1,17 @@
 package com.example.guratungu.karyawan
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.guratungu.R
-import com.example.guratungu.admin.LoginAdmin
-import com.example.guratungu.admin.RegisterAdmin
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.layout_awal.*
+import com.example.guratungu.admin.model.Users
+import com.google.firebase.database.*
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.layout_login_karyawan.*
+
 
 @Suppress("DEPRECATION")
 class LoginKaryawan : AppCompatActivity() {
@@ -26,10 +24,10 @@ class LoginKaryawan : AppCompatActivity() {
         btn_singinloginkaryawan.setOnClickListener {
             login()
         }
-        btn_creatakunloginkaryawan.setOnClickListener {
-            val intent = Intent(this, RegisterAdmin::class.java)
-            startActivity(intent)
-        }
+//        btn_creatakunloginkaryawan.setOnClickListener {
+//            val intent = Intent(this, RegisterAdmin::class.java)
+//            startActivity(intent)
+//        }
 
     }
 
@@ -45,20 +43,47 @@ class LoginKaryawan : AppCompatActivity() {
             it_passwdlogin.requestFocus()
             return
         }
-        val email =it_emaillogin.text.toString()
+        val email =it_emaillogin.text.toString().trim()
         val pasword= it_passwdlogin.text.toString()
-        val emailfirebase = ref.child("email").toString()
-        val passwdfirebase= ref.child("password")
-        if (email.equals(emailfirebase)&&pasword.equals(passwdfirebase)){
-            val intent =Intent(this,Index::class.java)
-            startActivity(intent)
-        }else{
-            Toast.makeText(
-                baseContext,
-                "Login Gagal data tidak di temukan ",
-                Toast.LENGTH_SHORT
-            )
-        }
+
+
+        var query = FirebaseDatabase.getInstance().getReference("users").orderByChild("email").equalTo(email)
+        query.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    for (snap in snapshot.children) {
+                        val x = snap.getValue(Users::class.java)
+                        Log.e("testsoal", Gson().toJson(x))
+                        if (x!!.password.equals(pasword.trim())) {
+                            val intent = Intent(this@LoginKaryawan, IndexKaryawan::class.java)
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(this@LoginKaryawan, "Password is wrong", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+
+
+//        val user = ref.child("User")
+//        val emailfirebase = ref.child("email").toString()
+//        val passwdfirebase= ref.child("password")
+//        if (email.equals(emailfirebase)&&pasword.equals(passwdfirebase)){
+//            val intent =Intent(this,Index::class.java)
+//            startActivity(intent)
+//        }else{
+//            Toast.makeText(
+//                baseContext,
+//                "Login Gagal data tidak di temukan ",
+//                Toast.LENGTH_SHORT
+//            )
+//        }
 
     }
     private fun fullScreen() {

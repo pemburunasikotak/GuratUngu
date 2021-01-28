@@ -1,17 +1,15 @@
 package com.example.guratungu.karyawan
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import com.example.guratungu.R
-import kotlinx.android.synthetic.main.layout_awal.*
 
 @Suppress("DEPRECATION")
-class Index : AppCompatActivity() {
+class IndexKaryawan : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.layout_index)
+        setContentView(R.layout.layout_indexkaryawan)
 
         fullScreen()
 
