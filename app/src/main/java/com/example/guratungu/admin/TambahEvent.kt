@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import com.example.guratungu.R
 import com.example.guratungu.admin.LoginAdmin
+import com.example.guratungu.admin.listagenda.ListAgenda
 import com.example.guratungu.admin.model.Event
 import com.example.guratungu.admin.model.Users
 import com.example.guratungu.karyawan.LoginKaryawan
@@ -23,7 +24,7 @@ class TambahEvent : AppCompatActivity() {
     lateinit var ref : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ref = FirebaseDatabase.getInstance().getReference("Event")
+        ref = FirebaseDatabase.getInstance().getReference("ListAgenda")
         setContentView(R.layout.layout_tambahevent)
         btn_tambaevent.setOnClickListener {
             tambah()
@@ -69,19 +70,21 @@ class TambahEvent : AppCompatActivity() {
         val waktu = et_wkttambahevent.text.toString().trim()
         val tgl = et_tgltambahevent.text.toString().trim()
         val tempat = et_tempattambahevent.text.toString().trim()
-        val lat = et_lattambahevent.text.toString().trim()
-        val long = et_longtambahevent.text.toString().trim()
+        val hari = et_lattambahevent.text.toString().trim()
+        //val long = et_longtambahevent.text.toString().trim()
         val durasi = et_durasitambahevent.text.toString().trim()
-        val event = Event(userId, nama, waktu,tgl,tempat,lat,long, durasi)
+        val event = Event(userId, nama, waktu,tgl,tempat,hari, durasi)
 
         ref.child(userId).setValue(event).addOnCompleteListener {
             Toast.makeText(this, "Sukses Tambah data ",Toast.LENGTH_LONG).show()
-            et_namatambahevent.setText("")
-            et_wkttambahevent.setText("")
-            et_tempattambahevent.setText("")
-            et_lattambahevent.setText("")
-            et_longtambahevent.setText("")
-            et_durasitambahevent.setText("")
+//            et_namatambahevent.setText("")
+//            et_wkttambahevent.setText("")
+//            et_tempattambahevent.setText("")
+//            et_lattambahevent.setText("")
+//            et_longtambahevent.setText("")
+//            et_durasitambahevent.setText("")
+            val intent = Intent(this, ListAgenda::class.java)
+            startActivity(intent)
         }
     }
 

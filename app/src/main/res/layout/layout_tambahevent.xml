@@ -82,7 +82,7 @@
                 android:hint="setwaktu"
                 android:textColorHint="@color/warnabghitam"
                 android:background="@drawable/ic_bglistagenda"
-                android:inputType="time" />
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -118,7 +118,7 @@
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="30dp"
-                android:text="Latitude"
+                android:text="Hari"
                 android:textSize="18dp" />
 
             <EditText
@@ -167,10 +167,16 @@
 
             <EditText
                 android:id="@+id/et_durasitambahevent"
-                android:layout_width="match_parent"
+                android:layout_width="62dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/ic_bglistagenda"
                 android:inputType="datetime" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:text="/hari"
+                android:textSize="18dp" />
         </LinearLayout>
 
         <Button

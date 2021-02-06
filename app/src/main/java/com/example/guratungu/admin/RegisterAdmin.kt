@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.view.WindowManager
 import android.widget.Toast
 import com.example.guratungu.R
+import com.example.guratungu.admin.model.Karywan
 import com.example.guratungu.admin.model.Users
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -20,7 +21,7 @@ class RegisterAdmin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_form_registrasi)
-        ref = FirebaseDatabase.getInstance().getReference("users")
+        ref = FirebaseDatabase.getInstance().getReference("karyawan")
         btn_registrasi.setOnClickListener {
             registrasi()
         }
@@ -56,20 +57,19 @@ class RegisterAdmin : AppCompatActivity() {
         val email = et_emailregistrasi.text.toString().trim()
         val password = et_paswdregistrasi.text.toString().trim()
         val no_telp = et_notelpregistrasi.text.toString().trim()
-        val user = Users(userId,nama, email, password, no_telp)
+        val user = Karywan(userId,nama, email, password, no_telp)
 
         if (nama.isEmpty()||email.isEmpty()||password.isEmpty()||no_telp.isEmpty()){
             Toast.makeText(this, "Masukkan data", Toast.LENGTH_SHORT).show()
         }else{
-            this.ref = FirebaseDatabase.getInstance().getReference("users")
+            this.ref = FirebaseDatabase.getInstance().getReference("karyawan")
             ref.child(userId).setValue(user).addOnCompleteListener {
                 Toast.makeText(this, "Successs", Toast.LENGTH_SHORT).show()
+                Log.d("test", ref.toString())
                 startActivity(Intent(this, IndexAdmin::class.java))
                 finish()
             }
         }
-
-
     }
 
     private fun fullScreen() {

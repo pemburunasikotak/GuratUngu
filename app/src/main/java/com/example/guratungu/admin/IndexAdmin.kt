@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.WindowManager
 import com.example.guratungu.MainActivity
 import com.example.guratungu.R
+import com.example.guratungu.admin.listagenda.ListAgenda
+import com.example.guratungu.admin.listannoncment.ListAnnoncment
 import com.example.guratungu.karyawan.LoginKaryawan
 import com.google.firebase.FirebaseApp
 import kotlinx.android.synthetic.main.layout_indexadmin.*
@@ -19,8 +21,12 @@ class IndexAdmin : AppCompatActivity() {
             val intent = Intent(this, RegisterAdmin::class.java)
             startActivity(intent)
         }
+        btn_infoeventadmin.setOnClickListener {
+            val intent = Intent(this, ListAgenda::class.java)
+            startActivity(intent)
+        }
         btn_announcamentadmin.setOnClickListener {
-            val intent = Intent(this, RegisterAdmin::class.java)
+            val intent = Intent(this, ListAnnoncment::class.java)
             startActivity(intent)
         }
         btn_keluarAdmin.setOnClickListener {
@@ -34,8 +40,7 @@ class IndexAdmin : AppCompatActivity() {
     }
 
     private fun keluar() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        finish()
         onDestroy()
     }
 

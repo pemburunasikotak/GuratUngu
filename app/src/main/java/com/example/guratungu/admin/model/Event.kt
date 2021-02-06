@@ -6,7 +6,6 @@ open class Event(
     var waktu: String ="",
     var tgl : String = "",
     var tempat: String= "",
-    var lat : String = "",
-    var long: String= "",
+    var hari : String = "",
     var durasi: String = ""
 )

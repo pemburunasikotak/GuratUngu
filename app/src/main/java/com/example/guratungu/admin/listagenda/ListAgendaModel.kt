@@ -5,8 +5,8 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class ListAgendaModel(
-    var event:String ="",
-    var lokasi: String="",
-    var jam:String="",
-    var hari:String=""
+    var nama:String ="",
+    var tempat: String="",
+    var durasi:String="",
+    var tgl:String=""
 ):Parcelable

@@ -80,13 +80,6 @@
             android:text="Sign In"
             android:textColor="#fff"
             android:layout_marginStart="94dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:textSize="12sp"
-            android:text="Belum Terdaftar ?" />
 
 
     </LinearLayout>

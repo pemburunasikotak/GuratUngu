@@ -77,7 +77,13 @@
             </TextView>
             <TextView
                 android:id="@+id/tvhari"
-                android:layout_width="200dp"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:text="@string/titik2">
+            </TextView>
+            <TextView
+                android:id="@+id/tvharitgl"
+                android:layout_width="100dp"
                 android:layout_height="20dp"
                 android:text="@string/titik2">
             </TextView>

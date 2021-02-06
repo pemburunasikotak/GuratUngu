@@ -7,6 +7,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.guratungu.R
+import com.example.guratungu.admin.model.Karywan
 import com.example.guratungu.admin.model.Users
 import com.google.firebase.database.*
 import com.google.gson.Gson
@@ -47,12 +48,12 @@ class LoginKaryawan : AppCompatActivity() {
         val pasword= it_passwdlogin.text.toString()
 
 
-        var query = FirebaseDatabase.getInstance().getReference("users").orderByChild("email").equalTo(email)
+        var query = FirebaseDatabase.getInstance().getReference("karyawan").orderByChild("email").equalTo(email)
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (snap in snapshot.children) {
-                        val x = snap.getValue(Users::class.java)
+                        val x = snap.getValue(Karywan::class.java)
                         Log.e("testsoal", Gson().toJson(x))
                         if (x!!.password.equals(pasword.trim())) {
                             val intent = Intent(this@LoginKaryawan, IndexKaryawan::class.java)

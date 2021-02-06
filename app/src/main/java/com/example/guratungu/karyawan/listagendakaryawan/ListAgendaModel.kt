@@ -1,18 +1,23 @@
 package com.example.guratungu.karyawan.listagendakaryawan
 
-import android.os.Parcelable
+
+import com.example.guratungu.admin.model.Users
 import kotlinx.android.parcel.Parcelize
 import com.google.firebase.database.PropertyName
 
 //data class ListAgendaModel
-@Parcelize
+
 data class ListAgendaModel(
     @PropertyName(value ="event")
-    var event:String ="",
+    var nama:String ="",
     @PropertyName(value ="lokasi")
-    var lokasi: String="",
+    var tempat: String="",
     @PropertyName(value ="jam")
-    var jam: Int =0,
+    var waktu: String ="",
+    @PropertyName(value ="tgl")
+    var tgl:String="",
     @PropertyName(value ="hari")
-    var hari:String=""
-) : Parcelable
+    var hari:String="",
+
+    val User:Users = Users()
+)
