@@ -7,4 +7,4 @@ import kotlinx.android.parcel.Parcelize
 data class ListAnnoncmentModel(
     var catatan:String=""
 
-):Parcelable
+): Parcelable

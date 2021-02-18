@@ -67,7 +67,7 @@
                     android:layout_width="163dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/ic_bg_putih"
-                    android:inputType="datetime"
+                    android:inputType="text"
                     android:textColorHint="@color/warnabghitam" />
 
 

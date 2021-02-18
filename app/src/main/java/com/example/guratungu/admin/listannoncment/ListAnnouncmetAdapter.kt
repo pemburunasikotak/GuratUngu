@@ -57,5 +57,3 @@ class ListAnnouncmetAdapter(private  val context: Context, private val listagend
 
     }
 }
-
-

@@ -11,6 +11,8 @@ import com.example.guratungu.admin.listannoncment.ListAnnoncmentModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.layout_announcment.*
+import kotlinx.android.synthetic.main.layout_announcment.btn_tambahAnno
+import kotlinx.android.synthetic.main.layout_tambahevent.*
 
 @Suppress("DEPRECATION")
 class Announcment : AppCompatActivity() {
@@ -19,6 +21,7 @@ class Announcment : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         ref = FirebaseDatabase.getInstance().getReference("Catatan")
         setContentView(R.layout.layout_announcment)
+
         btn_tambahAnno.setOnClickListener {
             simpan()
         }
@@ -42,7 +45,6 @@ class Announcment : AppCompatActivity() {
         }else{
             ref.child(userId).setValue(catat).addOnCompleteListener {
                 Toast.makeText(this, "Sukses Tambah Catatan",Toast.LENGTH_LONG).show()
-                et_annocom.setText("")
                 val intent = Intent(this, ListAnnoncment::class.java)
                 startActivity(intent)
             }

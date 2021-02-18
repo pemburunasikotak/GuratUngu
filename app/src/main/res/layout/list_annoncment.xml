@@ -8,7 +8,7 @@
     tools:context=".admin.listannoncment.ListAnnoncment">
     <LinearLayout
         android:layout_width="360dp"
-        android:layout_height="230dp"
+        android:layout_height="170dp"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:background="@drawable/ic_bglistagenda"
@@ -16,7 +16,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
@@ -34,24 +34,19 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="0dp"
+            android:layout_gravity="center"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/btn_editlistannonc"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="120dp"
-                android:text="@string/edit"
-                android:background="@drawable/ic_bgbirumuda">
-            </Button>
+
             <Button
                 android:id="@+id/btn_hapusListAnnon"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:text="@string/hapus"
-                android:background="@drawable/ic_bg_merah">
-            </Button>
+                android:layout_marginStart="250dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_bg_merah"
+
+                android:text="@string/hapus"></Button>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

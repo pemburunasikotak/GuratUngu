@@ -41,17 +41,17 @@ class LoginAdmin : AppCompatActivity() {
             it_passwdloginadmin.requestFocus()
             return
         }
-        val email =it_emailloginadmin.text.toString().trim()
+        val user =it_emailloginadmin.text.toString().trim()
         val pasword= it_passwdloginadmin.text.toString()
 
 
-        var query = FirebaseDatabase.getInstance().getReference("users").orderByChild("email").equalTo(email)
+        var query = FirebaseDatabase.getInstance().getReference("admin").orderByChild("user").equalTo(user)
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (snap in snapshot.children) {
                         val x = snap.getValue(Users::class.java)
-                        Log.e("testsoal", Gson().toJson(x))
+                        Log.e("test", Gson().toJson(x))
                         if (x!!.password.equals(pasword.trim())) {
                             val intent = Intent(this@LoginAdmin, IndexAdmin::class.java)
                             startActivity(intent)

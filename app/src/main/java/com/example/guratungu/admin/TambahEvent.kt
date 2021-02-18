@@ -47,6 +47,7 @@ class TambahEvent : AppCompatActivity() {
         //Intent Put Extra
 
         val bundle = intent.extras
+
         et_namatambahevent.setText(bundle?.getString("tveventadmin"))
         et_tempattambahevent.setText(bundle?.getString("tvlokasiadmin"))
         et_wkttambahevent.setText(bundle?.getString("tvjamadmin"))
@@ -109,7 +110,7 @@ class TambahEvent : AppCompatActivity() {
         //Notifikasi
 
         val title = et_namatambahevent.text.toString()
-        val message = et_namatambahevent.text.toString()
+        val message = et_tgltambahevent.text.toString()
         //val recipientToken = etToken.text.toString()
 
         Log.d("testtingmasage", title)
@@ -132,7 +133,7 @@ class TambahEvent : AppCompatActivity() {
 
         //ahir notifikasi
 
-        val userId = ref.push().key.toString()
+        val userId = et_namatambahevent.text.toString().trim()
         val nama = et_namatambahevent.text.toString().trim()
         val waktu = et_wkttambahevent.text.toString().trim()
         val tgl = et_tgltambahevent.text.toString().trim()
