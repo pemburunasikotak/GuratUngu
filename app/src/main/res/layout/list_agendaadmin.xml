@@ -25,6 +25,12 @@
             android:text="Event">
         </TextView>
         <TextView
+            android:id="@+id/tvid"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="........">
+        </TextView>
+        <TextView
             android:id="@+id/tveventadmin"
             android:layout_width="200dp"
             android:layout_height="20dp"
@@ -76,12 +82,17 @@
             android:layout_height="20dp"
             android:text="@string/hari_tgl">
         </TextView>
+
         <TextView
             android:id="@+id/tvhariadmin"
-            android:layout_width="200dp"
+            android:layout_width="109dp"
             android:layout_height="20dp"
-            android:text="@string/value">
-        </TextView>
+            android:text="@string/value"/>
+        <TextView
+            android:id="@+id/tvtgladmin"
+            android:layout_width="109dp"
+            android:layout_height="20dp"
+            android:text="@string/value"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,7 +116,7 @@
             android:layout_marginStart="20dp"
             android:text="@string/hapus"
             android:textAllCaps="false"
-            android:background="@drawable/ic_bgbirumuda">
+            android:background="@drawable/ic_bg_merah">
         </Button>
         <Button
             android:id="@+id/btn_karjoinListAgenda"

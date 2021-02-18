@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.guratungu">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
     <application
+
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
@@ -18,11 +22,19 @@
         <activity android:name=".admin.TambahEvent"/>
         <activity android:name=".admin.listagenda.ListAgenda"/>
         <activity android:name=".admin.listannoncment.ListAnnoncment"/>
-        <activity android:name=".admin.listchatgroup.ListChatGrup"/>
         <activity android:name=".karyawan.IndexKaryawan"/>
         <activity android:name=".karyawan.LoginKaryawan"/>
+        <activity android:name=".admin.listjoinadmin.ListChatGrup"/>
         <activity android:name=".karyawan.listagendakaryawan.ListAgenda"/>
         <activity android:name=".karyawan.listannoncmentkaryawan.ListAnnoncmentkarywan"/>
+        <service
+            android:name=".notifikasi.FirebaseService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,5 +42,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>

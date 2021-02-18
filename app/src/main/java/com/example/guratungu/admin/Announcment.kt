@@ -25,14 +25,16 @@ class Announcment : AppCompatActivity() {
         fullScreen()
     }
 
+    //fungsi untuk simpan
     private fun simpan() {
 
+        //cek validasi data
         if (et_annocom.text.toString().isEmpty()) {
             et_annocom.error = "Masukkan Catatan Terlebih dahulu"
             et_annocom.requestFocus()
             return
         }
-        val userId = ref.push().key.toString()
+        val userId = et_annocom.text.toString().trim()
         val catatan = et_annocom.text.toString().trim()
         val catat = ListAnnoncmentModel(catatan)
         if (catatan.isEmpty()){

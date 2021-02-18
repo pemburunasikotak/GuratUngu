@@ -5,7 +5,7 @@
     android:background="@color/warnabgUnggu"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".admin.listchatgroup.ListChatGrup">
+    tools:context=".admin.listjoinadmin.ListChatGrup">
 
     <ImageView
         android:layout_width="340dp"
@@ -21,7 +21,15 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:background="@drawable/ic_bglogin">
+        <EditText
+            android:id="@+id/tv_namaTidaktampil"
+            android:layout_width="0dp"
+            android:layout_margin="0dp"
+            android:text="@string/value"
+            tools:ignore="Suspicious0dp"
+            android:layout_height="0dp">
 
+        </EditText>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
@@ -32,6 +40,7 @@
             android:text="List Karyawan Yg Join"
             android:textColor="#000"/>
         <TextView
+            android:id="@+id/nama_event"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="22dp"
@@ -40,6 +49,7 @@
             android:layout_marginStart="10dp"
             android:text="Nama"
             android:textColor="#000"/>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvlistkaryawanjoin"

@@ -29,6 +29,7 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
+        android:textColor="#000"
         android:layout_gravity="center"
         android:background="@drawable/ic_bgbtn"
         android:text="@string/karyawan"/>
@@ -38,6 +39,7 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
+        android:textColor="#000"
         android:background="@drawable/ic_bgbtn"
         android:text="@string/admin" />
 

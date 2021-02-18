@@ -29,12 +29,6 @@ class IndexAdmin : AppCompatActivity() {
             val intent = Intent(this, ListAnnoncment::class.java)
             startActivity(intent)
         }
-        btn_keluarAdmin.setOnClickListener {
-            keluar()
-        }
-        btn_logOutAdmin.setOnClickListener {
-            keluar()
-        }
         fullScreen()
 
     }

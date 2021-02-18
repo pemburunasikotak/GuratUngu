@@ -17,7 +17,5 @@ data class ListAgendaModel(
     @PropertyName(value ="tgl")
     var tgl:String="",
     @PropertyName(value ="hari")
-    var hari:String="",
-
-    val User:Users = Users()
+    var hari:String=""
 )

@@ -20,11 +20,13 @@
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
+                android:textColor="#000"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="@string/event">
             </TextView>
             <TextView
+                android:textColor="#000"
                 android:id="@+id/tvevent"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
@@ -37,6 +39,7 @@
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
+                android:textColor="#000"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="@string/lokasi">
@@ -54,6 +57,7 @@
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
+                android:textColor="#000"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="@string/jam">
@@ -71,6 +75,7 @@
             android:layout_marginStart="20dp"
             android:orientation="horizontal">
             <TextView
+                android:textColor="#000"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:text="@string/hari_tgl">
@@ -100,7 +105,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="120dp"
                 android:text="Join"
-                android:background="@drawable/ic_bgbtn">
+                android:background="@drawable/ic_bgbirumuda">
             </Button>
             <Button
                 android:id="@+id/btn_lokasi"
@@ -108,7 +113,7 @@
                 android:layout_height="30dp"
                 android:layout_marginStart="20dp"
                 android:text="@string/lokasi"
-                android:background="@drawable/ic_bgbtn">
+                android:background="@drawable/ic_bgbirumuda">
             </Button>
         </LinearLayout>
     </LinearLayout>

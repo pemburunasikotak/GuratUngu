@@ -36,7 +36,7 @@ class ListAnnoncment : AppCompatActivity() {
     }
 
     private fun RecyclerCardView() {
-        val listadapter = ListAnnouncmetAdapter(list)
+        val listadapter = ListAnnouncmetAdapter(this,list)
         rvData.adapter =listadapter
         rvData.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
 
